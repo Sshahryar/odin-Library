@@ -7,8 +7,8 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-function addBookToLibrary() {
-  const newBook = newBook(title, author, pages, read);
+function addBookToLibrary(title, author, pages, read) {
+  const newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
 }
 
@@ -63,3 +63,4 @@ newBookForm.addEventListener('submit', (e) => {
   newBookForm.reset();
   newBookForm.style.display = 'none';
 });
+
