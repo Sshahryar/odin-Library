@@ -1,12 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f0f0f0;
 }
 
 h1 {
-  color: #333;
   text-align: center;
 }
 
@@ -20,12 +17,7 @@ h1 {
   cursor: pointer;
 }
 
-#new-book:hover {
-  background-color: #007B9A;
-}
-
 #new-book-form {
-  display: none;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -53,4 +45,5 @@ h1 {
   bottom: 10px;
   right: 10px;
 }
+
 
