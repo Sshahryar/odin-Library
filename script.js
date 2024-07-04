@@ -22,8 +22,7 @@ function displayBooks() {
 
     let removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
-    removeButton.addEventListener('click', (e) => {
-      let index = e.target.parentElement.dataset.index;
+    removeButton.addEventListener('click', () => {
       myLibrary.splice(index, 1);
       displayBooks();
     });
@@ -31,9 +30,8 @@ function displayBooks() {
 
     let toggleReadButton = document.createElement('button');
     toggleReadButton.textContent = book.read ? 'Read' : 'Not Read';
-    toggleReadButton.addEventListener('click', (e) => {
-      let index = e.target.parentElement.dataset.index;
-      myLibrary[index].toggleRead();
+    toggleReadButton.addEventListener('click', () => {
+      book.toggleRead();
       displayBooks();
     });
     bookCard.appendChild(toggleReadButton);
@@ -42,14 +40,11 @@ function displayBooks() {
   });
 }
 
-const newBookForm = document.getElementById('new-book-form');
-const newBookButton = document.getElementById('new-book');
-
-newBookButton.addEventListener('click', () => {
-  newBookForm.style.display = 'block';
+document.getElementById('new-book').addEventListener('click', () => {
+  document.getElementById('new-book-form').style.display = 'block';
 });
 
-newBookForm.addEventListener('submit', (e) => {
+document.getElementById('new-book-form').addEventListener('submit', (e) => {
   e.preventDefault();
 
   const title = document.getElementById('title').value;
@@ -60,7 +55,8 @@ newBookForm.addEventListener('submit', (e) => {
   addBookToLibrary(title, author, pages, read);
   displayBooks();
 
-  newBookForm.reset();
-  newBookForm.style.display = 'none';
+  document.getElementById('new-book-form').reset();
+  document.getElementById('new-book-form').style.display = 'none';
 });
+
 
