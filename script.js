@@ -51,7 +51,47 @@ function displayBooks() {
       document.getElementById('title').value = book.title;
       document.getElementById('author').value = book.author;
       document.getElementById('pages').value = book.pages;
-      document.getElementById('read').checked =
+      document.getElementById('read').checked = book.read;
+      document.getElementById('new-book-form').dataset.index = index;
+      document.getElementById('new-book-form').style.display = 'block';
+    });
+    bookCard.appendChild(editButton);
+
+    display.appendChild(bookCard);
+  });
+}
+
+document.getElementById('new-book').addEventListener('click', () => {
+  document.getElementById('new-book-form').reset();
+  document.getElementById('new-book-form').removeAttribute('data-index');
+  document.getElementById('new-book-form').style.display = 'block';
+});
+
+document.getElementById('new-book-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
+  const pages = document.getElementById('pages').value;
+  const read = document.getElementById('read').checked;
+
+  if (title === '' || author === '' || pages === '') {
+    alert('Please fill out all fields.');
+    return;
+  }
+
+  const index = document.getElementById('new-book-form').dataset.index;
+  if (index !== undefined) {
+    myLibrary[index] = new Book(title, author, pages, read);
+  } else {
+    addBookToLibrary(title, author, pages, read);
+  }
+
+  displayBooks();
+  document.getElementById('new-book-form').reset();
+  document.getElementById('new-book-form').style.display = 'none';
+});
+
 
 
 
