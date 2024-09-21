@@ -33,6 +33,7 @@ h1 {
   background-color: white;
   width: 300px;
   border-radius: 5px;
+  display: none;
 }
 
 #new-book-form label {
@@ -105,6 +106,7 @@ h1 {
 .book-card button:hover {
   background-color: #005f73;
 }
+
 
 
 
