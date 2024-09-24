@@ -48,19 +48,6 @@ function displayBooks() {
     });
     bookCard.appendChild(toggleReadButton);
 
-    let editButton = document.createElement('button');
-    editButton.textContent = 'Edit';
-    editButton.addEventListener('click', () => {
-      document.getElementById('title').value = book.title;
-      document.getElementById('author').value = book.author;
-      document.getElementById('pages').value = book.pages;
-      document.getElementById('read').checked = book.read;
-      document.getElementById('new-book-form').dataset.index = index;
-      document.getElementById('new-book-form').style.display = 'block';
-      console.log('Editing book:', book);
-    });
-    bookCard.appendChild(editButton);
-
     display.appendChild(bookCard);
   });
 }
@@ -98,6 +85,7 @@ document.getElementById('new-book-form').addEventListener('submit', (e) => {
   document.getElementById('new-book-form').style.display = 'none';
   console.log('Form submitted and reset');
 });
+
 
 
 
