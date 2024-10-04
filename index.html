@@ -1,31 +1,42 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Odin Library</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>My Library</h1>
+  <header>
+    <h1>My Library</h1>
+  </header>
 
-  <button id="new-book">NEW BOOK</button>
+  <main>
+    <button id="new-book" class="btn">NEW BOOK</button>
 
-  <form id="new-book-form" style="display: none;">
-    <label for="title">Title:</label><br>
-    <input type="text" id="title" name="title"><br>
-    <label for="author">Author:</label><br>
-    <input type="text" id="author" name="author"><br>
-    <label for="pages">Pages:</label><br>
-    <input type="number" id="pages" name="pages"><br>
-    <label for="read">Read:</label><br>
-    <input type="checkbox" id="read" name="read"><br>
-    <input type="submit" value="Add Book">
-  </form>
+    <form id="new-book-form" class="form">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
 
-  <div id="book-display"></div>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required>
+
+      <label for="pages">Pages:</label>
+      <input type="number" id="pages" name="pages" required>
+
+      <label for="read">Read:</label>
+      <input type="checkbox" id="read" name="read">
+
+      <input type="submit" value="Add Book" class="btn">
+    </form>
+
+    <div id="book-display" class="book-display"></div>
+  </main>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
