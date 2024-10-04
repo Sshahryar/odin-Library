@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -5,13 +6,17 @@ body {
   padding: 0;
 }
 
-h1 {
+header {
   text-align: center;
-  color: #333;
   margin-top: 20px;
 }
 
-#new-book {
+h1 {
+  color: #333;
+}
+
+/* Button Styles */
+.btn {
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
@@ -20,29 +25,31 @@ h1 {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  text-align: center;
 }
 
-#new-book:hover {
+.btn:hover {
   background-color: #005f73;
 }
 
-#new-book-form {
+/* Form Styles */
+.form {
+  display: none;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
   background-color: white;
   width: 300px;
   border-radius: 5px;
-  display: none;
 }
 
-#new-book-form label {
+.form label {
   display: block;
   margin-bottom: 5px;
 }
 
-#new-book-form input[type="text"],
-#new-book-form input[type="number"] {
+.form input[type="text"],
+.form input[type="number"] {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
@@ -50,24 +57,12 @@ h1 {
   border-radius: 5px;
 }
 
-#new-book-form input[type="checkbox"] {
+.form input[type="checkbox"] {
   margin-bottom: 10px;
 }
 
-#new-book-form input[type="submit"] {
-  background-color: #008CBA;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#new-book-form input[type="submit"]:hover {
-  background-color: #005f73;
-}
-
-#book-display {
+/* Book Display Styles */
+.book-display {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -106,6 +101,7 @@ h1 {
 .book-card button:hover {
   background-color: #005f73;
 }
+
 
 
 
