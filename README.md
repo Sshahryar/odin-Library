@@ -1,6 +1,6 @@
 # odin-Library
 
-Seventh project from "The Odin Project" (TOP), second project from Intermediate HTML and CSS Course. 
+Seventh project from "The Odin Project" (TOP), first project from Javascript course. 
 
 Creating a simple admin dashboard design. 
 
